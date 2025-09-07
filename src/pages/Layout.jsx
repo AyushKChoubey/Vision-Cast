@@ -31,7 +31,7 @@ const Layout = () => {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="w-full px-8 min-h-16 flex items-center justify-between border-b border-[#333333] bg-[#1A1A1A] relative z-10">
+      <nav className="w-full px-8 min-h-16 flex items-center justify-between border-b border-[#333333] bg-[#1A1A1A] relative z-50">
         {/* Logo */}
         <button
           type="button"

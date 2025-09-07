@@ -17,7 +17,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   return (
     <div
       className={`w-60 bg-[#1A1A1A] border-r border-[#333333] flex flex-col justify-between items-center 
-      max-sm:absolute top-14 bottom-0 
+      max-sm:absolute top-14 bottom-0 z-40
       ${sidebar ? 'translate-x-0' : 'max-sm:-translate-x-full'} 
       transition-transform duration-300 ease-in-out 
       overflow-hidden`}   // 👈 no scroll in sidebar
