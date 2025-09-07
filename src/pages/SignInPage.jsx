@@ -74,17 +74,22 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
         }
       `}</style>
 
-      <div className={`flex min-h-screen relative transition-all duration-700 ease-out ${isSplitView ? 'split-view' : ''}`}>
-        
+      <div
+        className={`flex min-h-screen relative transition-all duration-700 ease-out ${
+          isSplitView ? 'split-view' : ''
+        }`}
+      >
         {/* Left Panel */}
-        <div className={`flex items-center justify-center relative z-10 transition-all duration-700 ease-out ${
-          isSplitView 
-            ? 'w-1/2 bg-black' 
-            : 'w-full bg-gradient-to-br from-black to-gray-800'
-        }`}>
-          
+        <div
+          className={`flex items-center justify-center relative z-10 transition-all duration-700 ease-out ${
+            isSplitView
+              ? 'w-1/2 bg-black'
+              : 'w-full bg-gradient-to-br from-black to-gray-800'
+          }`}
+        >
           {/* Floating Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
+
             <div className={`absolute w-24 h-24 rounded-full bg-gradient-to-r from-yellow-400/10 to-yellow-600/5 float-1 transition-all duration-700 ease-out ${
               isSplitView ? 'top-[20%] left-[15%]' : 'top-[15%] left-[8%]'
             }`} />
@@ -97,17 +102,19 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
             <div className={`absolute w-28 h-28 rounded-full bg-gradient-to-r from-yellow-400/10 to-yellow-600/5 float-4 transition-all duration-700 ease-out ${
               isSplitView ? 'top-[10%] right-[25%]' : 'top-[5%] right-[15%]'
             }`} />
+
           </div>
 
           {/* Login Container */}
           <div className="relative z-20 bg-black/95 backdrop-blur-xl rounded-3xl p-12 w-full max-w-md border-2 border-yellow-400/30 shadow-2xl shadow-black/50">
-            
             {/* Logo */}
             <div className="text-center mb-8">
               <div className="flex items-center justify-center mb-4">
                 <Logo className="w-12 h-10 mr-3" />
               </div>
-              <h1 className="text-5xl font-bold mb-2 gradient-text tracking-wide">VisionCast</h1>
+              <h1 className="text-5xl font-bold mb-2 gradient-text tracking-wide">
+                VisionCast
+              </h1>
               <p className="text-gray-400 text-lg">Sign in to continue</p>
             </div>
 
@@ -132,7 +139,9 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
               />
               <div className="relative">
                 <input
-                  type={showPassword ? "text" : "password"}
+
+                  type={showPassword ? 'text' : 'password'}
+
                   name="password"
                   placeholder="Password"
                   value={formData.password}
@@ -147,6 +156,7 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200"
                 >
                   {showPassword ? (
+
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
                     </svg>
@@ -154,6 +164,7 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+
                     </svg>
                   )}
                 </button>
@@ -189,11 +200,14 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
 
             {/* Extra Links */}
             <div className="text-center mt-6 text-sm text-gray-400">
-              <a href="#" className="text-yellow-400 hover:text-orange-400 transition-colors">
+              <a
+                href="#"
+                className="text-yellow-400 hover:text-orange-400 transition-colors"
+              >
                 Forgot Password?
               </a>
               <span className="mx-2">•</span>
-              <button 
+              <button
                 onClick={onToggleToSignUp}
                 className="text-yellow-400 hover:text-orange-400 transition-colors"
               >
@@ -204,38 +218,46 @@ const SignInPage = ({ onToggleToSignUp, onSuccess }) => {
         </div>
 
         {/* Right Panel */}
-        <div className={`fixed top-0 right-0 w-1/2 h-screen bg-black border-l-2 border-yellow-400/30 overflow-hidden transition-transform duration-700 ease-out ${
-          isSplitView ? 'translate-x-0' : 'translate-x-full'
-        }`}>
+        <div
+          className={`fixed top-0 right-0 w-1/2 h-screen bg-black border-l-2 border-yellow-400/30 overflow-hidden transition-transform duration-700 ease-out ${
+            isSplitView ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
           <div className="text-white p-16 max-w-2xl">
-            <h2 className="text-4xl font-bold mb-6 gradient-text">VisionCast in Action</h2>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">
+              VisionCast in Action
+            </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Discover how VisionCast transforms your workflow with smart predictions, 
-              real-time analytics, and seamless integration.
+              Discover how VisionCast transforms your workflow with smart
+              predictions, real-time analytics, and seamless integration.
             </p>
 
             {/* Feature Grid */}
             <div className="grid grid-cols-2 gap-6">
               {[
                 {
-                  icon: "⚡",
-                  title: "Real-Time Insights",
-                  description: "Get instant analytics and predictions that keep you ahead of the curve."
+                  icon: '⚡',
+                  title: 'Real-Time Insights',
+                  description:
+                    'Get instant analytics and predictions that keep you ahead of the curve.'
                 },
                 {
-                  icon: "🔒",
-                  title: "Secure Access",
-                  description: "Advanced encryption keeps your data safe while maintaining lightning speed."
+                  icon: '🔒',
+                  title: 'Secure Access',
+                  description:
+                    'Advanced encryption keeps your data safe while maintaining lightning speed.'
                 },
                 {
-                  icon: "🎨",
-                  title: "Customizable",
-                  description: "Tailor dashboards and reports to fit your exact business needs."
+                  icon: '🎨',
+                  title: 'Customizable',
+                  description:
+                    'Tailor dashboards and reports to fit your exact business needs.'
                 },
                 {
-                  icon: "🤝",
-                  title: "Collaboration",
-                  description: "Work with your team in real-time, anywhere, on any device."
+                  icon: '🤝',
+                  title: 'Collaboration',
+                  description:
+                    'Work with your team in real-time, anywhere, on any device.'
                 }
               ].map((feature, index) => (
                 <div
