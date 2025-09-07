@@ -63,12 +63,23 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  const updateProfile = (profileData) => {
+    if (user) {
+      setUser({
+        ...user,
+        ...profileData,
+        fullName: `${profileData.firstName || ''} ${profileData.lastName || ''}`.trim() || user.fullName
+      });
+    }
+  };
+
   const value = {
     user,
     loading,
     signIn,
     signUp,
     signOut,
+    updateProfile,
     isAuthenticated: !!user,
   };
 

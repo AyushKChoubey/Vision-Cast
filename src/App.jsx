@@ -8,6 +8,8 @@ import GenerateVideos from './pages/GenerateVideos'
 import PostOnInstagram from './pages/PostOnInstagram'
 import PostOnX from './pages/PostOnX'
 import AuthPage from './pages/AuthPage'
+import ProfilePage from './pages/ProfilePage'
+import SettingsPage from './pages/SettingsPage'
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path='generate-videos' element={<GenerateVideos />} />
         <Route path='post-insta' element={<PostOnInstagram />} />
         <Route path='post-x' element={<PostOnX />} />
+        <Route path='profile' element={<ProfilePage />} />
+        <Route path='settings' element={<SettingsPage />} />
       </Route>
     </Routes>
   )
